@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700')
+
+//var
+$font: 'Roboto', sans-serif
+
+$black: #36382E
+$white: #EDE6E3
+$blue: #5BC3EB
+$red: #F06449
+$grey: #DADAD9
+
+*
+  margin: 0
+  padding: 0
+  outline: none
+  box-sizing: border-box
+
+@mixin phone
+  @media only screen and (max-width: 750px)
+    @content
+@mixin fullScreen
+  @media only screen and (min-width: 1100px)
+    @content
+
+body
+  background-color: $black
+  color: $black
+  font-family: $font
+  padding: 35px 50px
+  @include phone
+    padding: 0
+    background-color: $white
+
+.container
+  background-color: $white
+  
+  header
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    height: 75px
+    padding: 25px
+    margin-bottom: 50px
+    @include phone
+      flex-direction: column
+      margin-bottom: 35px
+      padding: 15px
+      background-color: $blue
+
+
+    .logo
+      flex: 2
+      font-size: 1.5em
+      font-weight: 300      
+      @include phone
+        text-align: left
+        margin-bottom: 15px
+        font-weight: 400
+        padding-top: 5px
+      @include fullScreen
+        font-size: 1.7em
+        padding-top: 5px
+        
+      
+    ul
+      flex: 2
+      list-style: none
+      text-align: right
+      margin-top: 5px
+      @include phone        
+        display: none
+      @include fullScreen
+        text-align: right
+        flex: 1
+        
+      
+      li
+        display: inline-block
+        font-weight: 300
+        margin-left: 10px
+        @include phone
+          margin: 0 5px
+        @include fullScreen
+          font-size: 1.5em
+
+        a
+          text-decoration: none
+          color: $black
+          transition: 0.3s
+          &:hover
+            color: $red
+    .hamburger
+      display: none
+      
+      @include phone
+        display: inline-block
+        position: absolute
+        top: 10px
+        right: 10px
+        img
+          width: 50px
+
+  //end header
+  .hero
+    padding: 25px
+    h1
+      font-weight: 400
+      margin-bottom: 50px
+      @include phone
+        text-align: center
+      @include fullScreen
+        font-size: 3em
+        font-weight: 600
+    p
+      font-weight: 300
+      max-width: 500px
+      line-height: 35px
+      @include fullScreen
+        font-size: 1.5em
+        max-width: 900px
+        line-height: 55px
+      .highlight
+        background-color: $black
+        font-weight: 400
+        color: white
+        padding: 0 2px
+      
+  .threePane
+    display: flex
+    flex-direction: row
+    background-color: $red
+    height: 100%
+    padding: 25px
+    text-align: center
+    @include phone
+      flex-direction: column
+      height: 100%
+    div
+      flex: 1  
+      h2
+        display: inline-block
+        height: 70px
+        font-size: 2em
+        margin-bottom: 30px
+      .threePaneIcon
+        margin-bottom: 35px
+      p
+        font-weight: 300
+        @include phone
+          margin-bottom: 25px
+        
+        
+          
+
+    
