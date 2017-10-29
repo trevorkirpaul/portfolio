@@ -8,6 +8,8 @@ $white: #EDE6E3
 $blue: #5BC3EB
 $red: #F06449
 $grey: #DADAD9
+$cedar: #C5523C
+
 
 *
   margin: 0
@@ -19,7 +21,7 @@ $grey: #DADAD9
   @media only screen and (max-width: 750px)
     @content
 @mixin fullScreen
-  @media only screen and (min-width: 1100px)
+  @media only screen and (min-width: 1300px)
     @content
 
 body
@@ -31,8 +33,10 @@ body
     padding: 0
     background-color: $white
 
+
 .container
   background-color: $white
+  background: linear-gradient(to top right, #ede6e3 64%, #dadad9 113%)
   
   header
     position: relative
@@ -42,12 +46,11 @@ body
     height: 75px
     padding: 25px
     margin-bottom: 50px
+    
     @include phone
       flex-direction: column
-      margin-bottom: 35px
-      padding: 15px
-      background-color: $blue
-
+      margin-bottom: 15px
+      padding: 15px     
 
     .logo
       flex: 2
@@ -60,8 +63,7 @@ body
         padding-top: 5px
       @include fullScreen
         font-size: 1.7em
-        padding-top: 5px
-        
+        padding-top: 5px        
       
     ul
       flex: 2
@@ -94,12 +96,45 @@ body
       display: none
       
       @include phone
-        display: inline-block
-        position: absolute
+        display: inline
+        opacity: 0.5
+        background-color: $black
+        padding: 5px 
+        position: fixed
         top: 10px
         right: 10px
-        img
-          width: 50px
+        span
+          color: $white
+          font-size: 1.5em
+
+    #mobileMenu
+      display: none      
+      flex-direction: column
+      position: fixed
+      top: 0px
+      left: 0px
+      width: 50%
+      height: 100%
+      padding: 15px
+      padding-top: 50px       
+      background-color: $black
+      color: $white
+      span
+        display: inline-block
+        flex: 1
+        text-align: center        
+        a
+          text-decoration: none
+          color: $white
+      .mobileMenuItem
+        font-size: 1.5em
+        font-weight: 700
+        text-transform: uppercase
+        
+
+
+      
+      
 
   //end header
   .hero
@@ -145,6 +180,7 @@ body
         margin-bottom: 30px
       .threePaneIcon
         margin-bottom: 35px
+    
       p
         font-weight: 300
         @include phone

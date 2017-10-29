@@ -16,7 +16,8 @@ body {
       background-color: #EDE6E3; } }
 
 .container {
-  background-color: #EDE6E3; }
+  background-color: #EDE6E3;
+  background: linear-gradient(to top right, #ede6e3 64%, #dadad9 113%); }
   .container header {
     position: relative;
     display: flex;
@@ -28,9 +29,8 @@ body {
     @media only screen and (max-width: 750px) {
       .container header {
         flex-direction: column;
-        margin-bottom: 35px;
-        padding: 15px;
-        background-color: #5BC3EB; } }
+        margin-bottom: 15px;
+        padding: 15px; } }
     .container header .logo {
       flex: 2;
       font-size: 1.5em;
@@ -41,7 +41,7 @@ body {
           margin-bottom: 15px;
           font-weight: 400;
           padding-top: 5px; } }
-      @media only screen and (min-width: 1100px) {
+      @media only screen and (min-width: 1300px) {
         .container header .logo {
           font-size: 1.7em;
           padding-top: 5px; } }
@@ -53,7 +53,7 @@ body {
       @media only screen and (max-width: 750px) {
         .container header ul {
           display: none; } }
-      @media only screen and (min-width: 1100px) {
+      @media only screen and (min-width: 1300px) {
         .container header ul {
           text-align: right;
           flex: 1; } }
@@ -64,7 +64,7 @@ body {
         @media only screen and (max-width: 750px) {
           .container header ul li {
             margin: 0 5px; } }
-        @media only screen and (min-width: 1100px) {
+        @media only screen and (min-width: 1300px) {
           .container header ul li {
             font-size: 1.5em; } }
         .container header ul li a {
@@ -77,12 +77,39 @@ body {
       display: none; }
       @media only screen and (max-width: 750px) {
         .container header .hamburger {
-          display: inline-block;
-          position: absolute;
+          display: inline;
+          opacity: 0.5;
+          background-color: #36382E;
+          padding: 5px;
+          position: fixed;
           top: 10px;
           right: 10px; }
-          .container header .hamburger img {
-            width: 50px; } }
+          .container header .hamburger span {
+            color: #EDE6E3;
+            font-size: 1.5em; } }
+    .container header #mobileMenu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 50%;
+      height: 100%;
+      padding: 15px;
+      padding-top: 50px;
+      background-color: #36382E;
+      color: #EDE6E3; }
+      .container header #mobileMenu span {
+        display: inline-block;
+        flex: 1;
+        text-align: center; }
+        .container header #mobileMenu span a {
+          text-decoration: none;
+          color: #EDE6E3; }
+      .container header #mobileMenu .mobileMenuItem {
+        font-size: 1.5em;
+        font-weight: 700;
+        text-transform: uppercase; }
   .container .hero {
     padding: 25px; }
     .container .hero h1 {
@@ -91,7 +118,7 @@ body {
       @media only screen and (max-width: 750px) {
         .container .hero h1 {
           text-align: center; } }
-      @media only screen and (min-width: 1100px) {
+      @media only screen and (min-width: 1300px) {
         .container .hero h1 {
           font-size: 3em;
           font-weight: 600; } }
@@ -99,7 +126,7 @@ body {
       font-weight: 300;
       max-width: 500px;
       line-height: 35px; }
-      @media only screen and (min-width: 1100px) {
+      @media only screen and (min-width: 1300px) {
         .container .hero p {
           font-size: 1.5em;
           max-width: 900px;
