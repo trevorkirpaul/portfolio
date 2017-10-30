@@ -7,7 +7,6 @@ let bool = false;
 const inpName = document.getElementById('inpName');
 const inpSubject = document.getElementById('inpSubject');
 const txtMsg = document.getElementById('txtMessage');
-const btnClear = document.getElementById('btnClear');
 const btnSubmit = document.getElementById('btnSubmit');
 
 const formInputs = [inpName, inpSubject, txtMsg];
@@ -28,10 +27,6 @@ menu.addEventListener('click', (event) => {
 });
 
 //form fxn
-
-btnClear.addEventListener('click', () => {
-  event.preventDefault();
-})
 
 btnSubmit.addEventListener('click', () => {
   event.preventDefault();
