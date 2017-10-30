@@ -172,20 +172,85 @@ body
       flex-direction: column
       height: 100%
     div
-      flex: 1  
-      h2
-        display: inline-block
-        height: 70px
-        font-size: 2em
-        margin-bottom: 30px
+      flex: 1
+      
+      .threePaneHcontain
+        height: 125px
+        h2
+          display: inline-block
+          height: 70px
+          font-size: 2em
+        
       .threePaneIcon
+        height: 125px
         margin-bottom: 35px
     
       p
         font-weight: 300
-        @include phone
+        max-width: 200px
+        margin: 0 auto
+        line-height: 25px
+        @include phone          
           margin-bottom: 25px
+          width: 100%
+        @include fullScreen
+          max-width: 325px
+
+  .quickContact
+    background-color: $white
+    color: $black
+    padding: 15px
+    @include phone
+      text-align: center
+      
+
+    h2
+      font-size: 2em
+      margin-bottom: 15px
+      @include phone
+        font-size: 1.5em
+        line-height: 35px
+    p
+      color: $black
+      margin-bottom: 30px
+
+    form
+      input
+        border: none
+        // border-bottom: 2px solid $red
+        border: 2px solid $red
+        background-color: $white
+        height: 35px
+        margin-bottom: 15px
+        width: 50%
+        padding: 5px
+      textarea
+        resize: none
+        border: 2px solid $red
+        background-color: $white
+        color: $black
+        font-family: $font
+        width: 50%
+        padding: 5px
+        margin-bottom: 15px
+      button
+        border: 2px solid $red
+        background: $red
+        padding: 5px
+        cursor: pointer
+        margin-right: 5px
+      #btnClear
+        background-color: $white 
+
+      @include phone
+        input, textarea
+          width: 90%
+      @include fullScreen
+        input, textarea
+          width: 500px
+
         
+
         
           
 

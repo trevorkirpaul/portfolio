@@ -149,17 +149,74 @@ body {
         height: 100%; } }
     .container .threePane div {
       flex: 1; }
-      .container .threePane div h2 {
-        display: inline-block;
-        height: 70px;
-        font-size: 2em;
-        margin-bottom: 30px; }
+      .container .threePane div .threePaneHcontain {
+        height: 125px; }
+        .container .threePane div .threePaneHcontain h2 {
+          display: inline-block;
+          height: 70px;
+          font-size: 2em; }
       .container .threePane div .threePaneIcon {
+        height: 125px;
         margin-bottom: 35px; }
       .container .threePane div p {
-        font-weight: 300; }
+        font-weight: 300;
+        max-width: 200px;
+        margin: 0 auto;
+        line-height: 25px; }
         @media only screen and (max-width: 750px) {
           .container .threePane div p {
-            margin-bottom: 25px; } }
+            margin-bottom: 25px;
+            width: 100%; } }
+        @media only screen and (min-width: 1300px) {
+          .container .threePane div p {
+            max-width: 325px; } }
+  .container .quickContact {
+    background-color: #EDE6E3;
+    color: #36382E;
+    padding: 15px; }
+    @media only screen and (max-width: 750px) {
+      .container .quickContact {
+        text-align: center; } }
+    .container .quickContact h2 {
+      font-size: 2em;
+      margin-bottom: 15px; }
+      @media only screen and (max-width: 750px) {
+        .container .quickContact h2 {
+          font-size: 1.5em;
+          line-height: 35px; } }
+    .container .quickContact p {
+      color: #36382E;
+      margin-bottom: 30px; }
+    .container .quickContact form input {
+      border: none;
+      border: 2px solid #F06449;
+      background-color: #EDE6E3;
+      height: 35px;
+      margin-bottom: 15px;
+      width: 50%;
+      padding: 5px; }
+    .container .quickContact form textarea {
+      resize: none;
+      border: 2px solid #F06449;
+      background-color: #EDE6E3;
+      color: #36382E;
+      font-family: "Roboto", sans-serif;
+      width: 50%;
+      padding: 5px;
+      margin-bottom: 15px; }
+    .container .quickContact form button {
+      border: 2px solid #F06449;
+      background: #F06449;
+      padding: 5px;
+      cursor: pointer;
+      margin-right: 5px; }
+    .container .quickContact form #btnClear {
+      background-color: #EDE6E3; }
+    @media only screen and (max-width: 750px) {
+      .container .quickContact form input, .container .quickContact form textarea {
+        width: 90%; } }
+    @media only screen and (min-width: 1300px) {
+      .container .quickContact form input, .container .quickContact form textarea {
+        width: 500px; } }
 
 /*# sourceMappingURL=style.css.map */
