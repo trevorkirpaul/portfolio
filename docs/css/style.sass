@@ -201,6 +201,7 @@ body
     background-color: $white
     color: $black
     padding: 15px
+    margin-bottom: 55px
     @include phone
       text-align: center
       
@@ -249,7 +250,39 @@ body
       @include fullScreen
         input, textarea
           width: 500px
+  // END OF QUICK CONTACT STYLING
 
+  footer
+    background-color: $blue
+    padding: 25px 20px
+    
+    color: $black
+    display: flex
+    flex-direction: row
+    
+
+    .footerLogo
+      flex: 1
+    .footerSocial
+      flex: 1
+    .footerMap
+      flex: 1
+    div
+      h3
+        margin-bottom: 15px
+      ul
+        list-style: none
+        li
+          display: block
+          padding: 5px
+          @include fullScreen
+            display: inline-block
+          a            
+            text-decoration: none
+            color: $black
+            padding: 5px
+
+    
         
 
         
