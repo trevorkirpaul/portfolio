@@ -9,3 +9,7 @@ This design is simple and beautiful and I think this will be the direction I tak
 ## Oct 29 2017
 
 The mobile view's menu button has its js functionality now. I still need to add animation to the button and mobile menu pane as well as the rest of the site. This will be my first time dealing with animation so it should prove to be a great learning experience.
+
+## Oct 30 2017
+
+The footer and asmall contact form has been designed and implemented on the front page. I'm trying to figure out how I want the form to operate.
