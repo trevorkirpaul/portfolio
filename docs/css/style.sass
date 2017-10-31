@@ -139,7 +139,7 @@ body
 
   //end header
   .hero
-    padding: 25px
+    padding: 25px    
     h1
       font-weight: 400
       margin-bottom: 50px
@@ -148,6 +148,19 @@ body
       @include fullScreen
         font-size: 3em
         font-weight: 600
+    .aboutHead
+      margin-bottom: 15px
+    .aboutSubhead
+      margin-bottom: 15px
+      padding-bottom: 15px
+      font-weight: 400
+      display: inline-block
+      border-bottom: 2px solid $red
+      @include phone
+        
+        display: inline-block
+        text-align: center
+
     p
       font-weight: 300
       max-width: 500px
@@ -161,6 +174,8 @@ body
         font-weight: 400
         color: white
         padding: 0 2px
+    .aboutPara
+      margin-bottom: 15px
       
   .threePane
     display: flex
@@ -195,7 +210,9 @@ body
           margin-bottom: 25px
           width: 100%
         @include fullScreen
-          max-width: 325px
+          max-width: 325px  
+    
+      
 
   .quickContact
     background-color: $white
@@ -281,6 +298,55 @@ body
             text-decoration: none
             color: $black
             padding: 5px
+  
+  //ABOUT PAGE.HTML
+
+  .aboutMore
+    padding: 25px
+    background-color: $red
+    color: $black
+    h2
+      margin-bottom: 35px
+    p
+      line-height: 35px
+      max-width: 500px
+      margin-bottom: 25px
+    .aboutSpecial
+      font-weight: 300
+      font-size: 1.2em
+      background-color: $black
+      color: $white
+      padding: 15px
+    @include fullScreen
+      display: grid
+      grid-template-columns: 1fr 1fr
+      h2
+        grid-column: 1/3
+      p
+        max-width: 70%
+        font-weight: 300
+        font-size: 1.3em
+            
+
+
+  .thankYou
+    padding: 25px
+    font-size: 1.4em
+    line-height: 35px
+    text-align: center
+    max-width: 600px
+    margin: 15px auto
+    font-weight: 300
+    @include fullScreen
+      max-width: 700px
+      margin: 15px auto
+      line-height: 50px
+      font-weight: 300
+
+      
+       
+    
+
 
     
         
