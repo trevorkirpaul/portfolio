@@ -113,6 +113,8 @@ body {
         font-size: 1.5em;
         font-weight: 700;
         text-transform: uppercase; }
+      .container header #mobileMenu .active {
+        color: #F06449; }
   .container .hero {
     padding: 25px; }
     .container .hero h1 {
@@ -132,7 +134,7 @@ body {
       padding-bottom: 15px;
       font-weight: 400;
       display: inline-block;
-      border-bottom: 2px solid #F06449; }
+      border-bottom: 2px solid #A8C256; }
       @media only screen and (max-width: 750px) {
         .container .hero .aboutSubhead {
           display: inline-block;
@@ -262,9 +264,11 @@ body {
           text-decoration: none;
           color: #36382E;
           padding: 5px; }
+  .container .portfolioFooter {
+    background-color: #EDE6E3; }
   .container .aboutMore {
     padding: 25px;
-    background-color: #F06449;
+    background-color: #A8C256;
     color: #36382E; }
     .container .aboutMore h2 {
       margin-bottom: 35px; }
@@ -310,7 +314,10 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 25px;
-      grid-row-gap: 20px; }
+      grid-row-gap: 20px;
+      grid-column-gap: 20px;
+      max-width: 900px;
+      margin: 0 auto; }
       .container .portfolio .innerGrid div {
         height: 200px;
         width: 350px;

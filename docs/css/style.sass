@@ -9,6 +9,7 @@ $blue: #5BC3EB
 $red: #F06449
 $grey: #DADAD9
 $cedar: #C5523C
+$green: #A8C256
 
 
 *
@@ -138,6 +139,8 @@ body
         font-size: 1.5em
         font-weight: 700
         text-transform: uppercase
+      .active
+        color: $red
         
 
 
@@ -162,7 +165,7 @@ body
       padding-bottom: 15px
       font-weight: 400
       display: inline-block
-      border-bottom: 2px solid $red
+      border-bottom: 2px solid $green
       @include phone
         
         display: inline-block
@@ -305,12 +308,14 @@ body
             text-decoration: none
             color: $black
             padding: 5px
+  .portfolioFooter
+    background-color: $white
   
   //ABOUT PAGE.HTML
 
   .aboutMore
     padding: 25px
-    background-color: $red
+    background-color: $green
     color: $black
     h2
       margin-bottom: 35px
@@ -359,6 +364,9 @@ body
       grid-template-columns: 1fr 1fr
       grid-column-gap: 25px
       grid-row-gap: 20px 
+      grid-column-gap: 20px
+      max-width: 900px
+      margin: 0 auto
       
       div
         height: 200px
@@ -395,6 +403,9 @@ body
           backgorund-size: center          
         &:hover > *
           display: none
+
+
+      
         
   
     

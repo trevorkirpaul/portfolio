@@ -29,7 +29,7 @@ menu.addEventListener('click', (event) => {
 //form fxn
 
 btnSubmit.addEventListener('click', () => {
-  event.preventDefault();
+  //event.preventDefault();
 })
 
 formInputs.forEach((item)=>{
