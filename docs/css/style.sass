@@ -23,7 +23,9 @@ $cedar: #C5523C
 @mixin fullScreen
   @media only screen and (min-width: 1300px)
     @content
-
+@mixin tablet
+  @media only screen and (max-width: 820px)
+    @content
 body
   background-color: $black
   color: $black
@@ -82,17 +84,22 @@ body
         display: inline-block
         font-weight: 300
         margin-left: 10px
+        
         @include phone
           margin: 0 5px
         @include fullScreen
           font-size: 1.5em
+             
 
         a
           text-decoration: none
           color: $black
           transition: 0.3s
+          border-bottom: 2px solid rgba(255, 0, 0, 0.0)
           &:hover
             color: $red
+        .active
+          border-color: $red
     .hamburger
       display: none
       
@@ -325,10 +332,8 @@ body
       p
         max-width: 70%
         font-weight: 300
-        font-size: 1.3em
-            
-
-
+        font-size: 1.3em           
+  
   .thankYou
     padding: 25px
     font-size: 1.4em
@@ -343,7 +348,56 @@ body
       line-height: 50px
       font-weight: 300
 
+  //END ABOUT PAGE STYLING    
+
+  .portfolio
+    background-color: $blue
+    color: $white
+    padding: 25px
+    .innerGrid
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 25px
+      grid-row-gap: 20px 
       
+      div
+        height: 200px
+        width: 350px
+        margin: 0 auto
+        text-align: center
+        background-color: $black
+        color: $white
+        
+        @include tablet
+          width: 75%
+          height: 150px
+          margin-bottom: 25px
+          padding: 10px
+        
+
+        h2
+          margin-top: 45px
+          margin-bottom: 15px
+          @include tablet
+            margin-top: 25px
+            margin-bottom: 5px
+        p
+          font-weight: 300
+
+      @include tablet
+        display: flex
+        flex-direction: column
+      .projectOne
+        cursor: pointer
+        &:hover
+          background-image: url('../img/logo-red.png')
+          background-size: cover
+          backgorund-size: center          
+        &:hover > *
+          display: none
+        
+  
+    
        
     
 

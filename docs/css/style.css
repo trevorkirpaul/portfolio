@@ -70,9 +70,12 @@ body {
         .container header ul li a {
           text-decoration: none;
           color: #36382E;
-          transition: 0.3s; }
+          transition: 0.3s;
+          border-bottom: 2px solid rgba(255, 0, 0, 0); }
           .container header ul li a:hover {
             color: #F06449; }
+        .container header ul li .active {
+          border-color: #F06449; }
     .container header .hamburger {
       display: none; }
       @media only screen and (max-width: 750px) {
@@ -299,5 +302,48 @@ body {
         margin: 15px auto;
         line-height: 50px;
         font-weight: 300; } }
+  .container .portfolio {
+    background-color: #5BC3EB;
+    color: #EDE6E3;
+    padding: 25px; }
+    .container .portfolio .innerGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 25px;
+      grid-row-gap: 20px; }
+      .container .portfolio .innerGrid div {
+        height: 200px;
+        width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #36382E;
+        color: #EDE6E3; }
+        @media only screen and (max-width: 820px) {
+          .container .portfolio .innerGrid div {
+            width: 75%;
+            height: 150px;
+            margin-bottom: 25px;
+            padding: 10px; } }
+        .container .portfolio .innerGrid div h2 {
+          margin-top: 45px;
+          margin-bottom: 15px; }
+          @media only screen and (max-width: 820px) {
+            .container .portfolio .innerGrid div h2 {
+              margin-top: 25px;
+              margin-bottom: 5px; } }
+        .container .portfolio .innerGrid div p {
+          font-weight: 300; }
+      @media only screen and (max-width: 820px) {
+        .container .portfolio .innerGrid {
+          display: flex;
+          flex-direction: column; } }
+      .container .portfolio .innerGrid .projectOne {
+        cursor: pointer; }
+        .container .portfolio .innerGrid .projectOne:hover {
+          background-image: url("../img/logo-red.png");
+          background-size: cover;
+          backgorund-size: center; }
+        .container .portfolio .innerGrid .projectOne:hover > * {
+          display: none; }
 
 /*# sourceMappingURL=style.css.map */
