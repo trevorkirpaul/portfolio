@@ -198,12 +198,17 @@ body {
       .container .quickContact {
         text-align: center; } }
     .container .quickContact h2 {
-      font-size: 2em;
-      margin-bottom: 15px; }
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      font-weight: 400; }
       @media only screen and (max-width: 750px) {
         .container .quickContact h2 {
           font-size: 1.5em;
           line-height: 35px; } }
+      @media only screen and (min-width: 1300px) {
+        .container .quickContact h2 {
+          font-weight: 600;
+          font-size: 3em; } }
     .container .quickContact p {
       color: #36382E;
       margin-bottom: 30px; }
