@@ -8,6 +8,6 @@ server.watch('docs');
 
 app.use(express.static('docs'));
 
-app.listen(3000, () => {
+app.listen(80, () => {
   console.log('Server running...');
 });
