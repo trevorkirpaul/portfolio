@@ -1,0 +1,366 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn:400,700,900"); */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #FDFEFA; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "header header header header" "hero hero hero hero" "Welcome Welcome wPics wPics" "reserve reserve reserve reserve"; }
+  .container header {
+    margin-top: 20px;
+    height: 120px;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: "Roboto", sans-serif; }
+    .container header ul {
+      list-style: none;
+      margin-top: 60px;
+      font-weight: 300;
+      color: #141414; }
+      .container header ul li {
+        padding-bottom: 15px;
+        padding-top: 10px;
+        border-top: 3px solid #FDFEFA;
+        display: inline-block; }
+        .container header ul li a {
+          text-decoration: none;
+          color: #141414; }
+    .container header .menuLeft {
+      text-align: left; }
+      .container header .menuLeft li {
+        padding-right: 25px; }
+        .container header .menuLeft li:hover {
+          border-top: 3px solid #EF233C; }
+    .container header #logo {
+      text-align: center; }
+      .container header #logo img {
+        width: 150px;
+        display: inline-block;
+        margin: 0 auto; }
+    .container header .menuRight {
+      text-align: right; }
+      .container header .menuRight li {
+        padding-left: 25px;
+        cursor: pointer; }
+        .container header .menuRight li:hover {
+          border-top: 3px solid #EF233C; }
+    .container header ul .active {
+      border-color: #141414;
+      cursor: default; }
+      .container header ul .active:hover {
+        border-color: #141414; }
+  .container .hero {
+    position: relative;
+    grid-area: hero;
+    background-image: url(../img/hero.jpeg);
+    background-size: cover;
+    background-postion: center;
+    margin-top: 40px;
+    height: 600px; }
+    .container .hero #heroTitle {
+      position: absolute;
+      font-family: "Vollkorn", serif;
+      font-size: 3em;
+      color: #FDFEFA;
+      background-color: #141414;
+      padding: 5px 15px;
+      right: 25px;
+      top: 40px; }
+    .container .hero p {
+      position: absolute;
+      right: 75px;
+      top: 110px;
+      font-size: 2em;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      background-color: #FDFEFA;
+      color: #141414;
+      padding: 5px 15px; }
+      .container .hero p span {
+        color: #EF233C;
+        font-weight: 400; }
+  .container .welcomeSection {
+    grid-area: Welcome;
+    margin-top: 70px;
+    margin-bottom: 50px; }
+    .container .welcomeSection h1 {
+      margin-bottom: 50px;
+      font-size: 5em;
+      font-family: "Vollkorn", serif;
+      color: #141414;
+      font-weight: 300; }
+    .container .welcomeSection h3 {
+      margin-left: 10px;
+      font-family: "Vollkorn", serif;
+      font-weight: 300;
+      font-size: 2em; }
+      .container .welcomeSection h3 a {
+        color: #EF233C; }
+    .container .welcomeSection p {
+      width: 80%;
+      line-height: 35px;
+      margin-bottom: 35px;
+      color: #141414;
+      margin-left: 10px; }
+      .container .welcomeSection p span {
+        color: #EF233C; }
+  .container .welcomePics {
+    grid-area: wPics;
+    margin-top: 238px;
+    text-align: right; }
+    .container .welcomePics .imgContainer {
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 25px; }
+
+.welcomeReserve {
+  grid-area: reserve;
+  height: 250px;
+  background-color: #141414;
+  color: #FDFEFA;
+  font-family: "Vollkorn", serif;
+  padding: 15px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px; }
+  .welcomeReserve h3 {
+    margin: 15px 0 45px 0;
+    font-family: "Roboto", sans-serif;
+    color: #FDFEFA;
+    font-size: 1.5em;
+    text-transform: uppercase; }
+  .welcomeReserve .reserveGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 25px;
+    text-align: left; }
+    .welcomeReserve .reserveGrid div span {
+      display: inline-block;
+      margin-bottom: 15px;
+      font-family: "Roboto", sans-serif; }
+    .welcomeReserve .reserveGrid div input {
+      display: inline-block;
+      width: 90%;
+      margin: 0 auto;
+      height: 30px;
+      padding: 2px;
+      font-size: 120%;
+      border: none;
+      border-bottom: 1px solid #FDFEFA;
+      background-color: #141414;
+      color: #FDFEFA; }
+  .welcomeReserve #btnSub {
+    margin: 0 auto;
+    width: 150px;
+    height: 35px;
+    border: 1px solid #FDFEFA;
+    background-color: #141414;
+    color: #FDFEFA;
+    font-size: 120%;
+    cursor: pointer;
+    transition: 0.3s; }
+    .welcomeReserve #btnSub:hover {
+      background-color: #FDFEFA;
+      color: #141414; }
+
+.menuContainer {
+  grid-area: hero;
+  background-color: #E3E3E3;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 35px;
+  margin-bottom: 50px; }
+  .menuContainer .menuContainerTitle {
+    grid-column: 1/3;
+    text-align: center;
+    font-family: "Vollkorn", serif;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+    .menuContainer .menuContainerTitle h1 {
+      font-weight: 300;
+      font-size: 4em;
+      color: #141414;
+      padding: 0px;
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900;
+      text-transform: uppercase; }
+  .menuContainer .left {
+    grid-column: 1/2;
+    text-align: center; }
+  .menuContainer .right {
+    grid-column: 2/3;
+    text-align: center; }
+  .menuContainer .menuSection {
+    font-family: "Vollkorn", serif;
+    color: #141414;
+    margin-bottom: 75px; }
+    .menuContainer .menuSection h2 {
+      font-weight: 300;
+      margin-bottom: 35px;
+      display: inline-block;
+      background-color: #EF233C;
+      padding: 5px 10px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 900; }
+    .menuContainer .menuSection .foodItem {
+      margin-bottom: 55px; }
+      .menuContainer .menuSection .foodItem .foodTitle {
+        margin-bottom: 5px; }
+      .menuContainer .menuSection .foodItem .foodDescription {
+        margin: 0 auto;
+        margin-bottom: 15px;
+        max-width: 200px;
+        line-height: 35px; }
+
+.contactForm input {
+  display: block;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid #141414; }
+.contactForm textarea {
+  display: block;
+  width: 400px;
+  font-family: "Roboto", sans-serif;
+  padding: 5px;
+  resize: none;
+  margin-bottom: 15px;
+  border: 1px solid #141414; }
+.contactForm button {
+  border: 1px solid #141414;
+  background-color: #FDFEFA;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s; }
+  .contactForm button:hover {
+    background-color: #EF233C;
+    border-color: #EF233C; }
+
+#btnSubmitAnotherContact {
+  border: 1px solid #141414;
+  background-color: #FDFEFA;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none; }
+  #btnSubmitAnotherContact:hover {
+    background-color: #EF233C;
+    border-color: #EF233C; }
+
+.contactAsideContainer {
+  grid-area: wPics;
+  margin-top: 170px;
+  margin-bottom: 250px;
+  background-color: #FDFEFA;
+  padding: 15px; }
+
+#contactAside {
+  text-align: left;
+  width: 300px; }
+  #contactAside h2 {
+    font-family: "Vollkorn", serif;
+    margin-bottom: 25px; }
+  #contactAside p {
+    line-height: 35px; }
+
+footer {
+  background-color: #EF233C;
+  padding: 25px;
+  height: 250px;
+  display: flex;
+  flex-direction: row; }
+  footer .footerLeft {
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    color: #141414; }
+    footer .footerLeft span {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 600; }
+    footer .footerLeft ul {
+      list-style: none;
+      margin-left: 5px;
+      color: #FDFEFA; }
+      footer .footerLeft ul li {
+        padding: 5px; }
+        footer .footerLeft ul li a {
+          color: #FDFEFA;
+          text-decoration: none; }
+  footer .footerMiddle {
+    flex: 1;
+    text-align: center; }
+    footer .footerMiddle img {
+      display: inline-block;
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 15px; }
+    footer .footerMiddle h3 {
+      color: #141414;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300; }
+  footer .footerSocial {
+    flex: 1;
+    text-align: center; }
+    footer .footerSocial ul {
+      list-style: none; }
+      footer .footerSocial ul li {
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer; }
+        footer .footerSocial ul li:hover {
+          color: #FDFEFA; }
+
+.eventsHero {
+  background-image: url(../img/eventshero.jpeg);
+  background-size: cover;
+  background-position: center;
+  grid-area: hero;
+  height: 400px;
+  text-align: center;
+  margin-bottom: 50px; }
+  .eventsHero .eventsHeroText {
+    margin-top: 150px;
+    font-family: "Roboto", sans-serif; }
+    .eventsHero .eventsHeroText h1 {
+      font-size: 4em;
+      display: inline-block;
+      background-color: #141414;
+      color: #FDFEFA;
+      padding: 5px 15px;
+      margin-bottom: 10px; }
+    .eventsHero .eventsHeroText h3 {
+      font-size: 2em;
+      display: inline-block;
+      background-color: #EF233C;
+      padding: 5px 15px;
+      font-weight: 300; }
+
+.eventsBody {
+  grid-area: Welcome;
+  font-family: "Roboto", sans-serif;
+  padding: 15px; }
+  .eventsBody h2 {
+    font-size: 2em;
+    margin-bottom: 25px; }
+  .eventsBody h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 15px; }
+  .eventsBody p {
+    margin-bottom: 55px;
+    line-height: 35px; }
+
+/*# sourceMappingURL=style.css.map */
