@@ -1,0 +1,390 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700"); */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #F5F5F5;
+  color: #303030;
+  padding: 15px;
+  font-family: "Roboto", sans-serif; }
+  @media only screen and (max-width: 800px) {
+    body {
+      padding: 0; } }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto; }
+  .container header {
+    position: relative;
+    background-color: #303030;
+    color: #F5F5F5;
+    margin: 10px;
+    padding: 25px;
+    display: flex;
+    margin-bottom: 15px; }
+    @media only screen and (max-width: 800px) {
+      .container header {
+        flex-direction: column;
+        flex-flow: row wrap; } }
+    .container header .logo {
+      flex: 1;
+      font-size: 1.5em;
+      font-weight: 600; }
+      .container header .logo a {
+        color: #F5F5F5;
+        text-decoration: none; }
+      @media only screen and (max-width: 800px) {
+        .container header .logo {
+          text-align: left;
+          margin-bottom: 20px;
+          flex-basis: 50%; } }
+      .container header .logo::before {
+        content: "+";
+        font-weight: 700;
+        color: #009DDC; }
+    .container header .location {
+      flex: 1;
+      text-align: center; }
+      @media only screen and (max-width: 800px) {
+        .container header .location {
+          text-align: right;
+          margin-bottom: 10px;
+          flex-basis: 50%; } }
+      .container header .location select {
+        width: 70%;
+        margin-top: 1px;
+        height: 25px;
+        border: 1px solid #F5F5F5;
+        background-color: #303030;
+        color: #F5F5F5; }
+    .container header nav {
+      flex: 1;
+      text-align: right; }
+      @media only screen and (max-width: 800px) {
+        .container header nav {
+          display: none; } }
+      .container header nav ul {
+        list-style: none;
+        margin-top: 2px; }
+        .container header nav ul li {
+          display: inline-block;
+          color: #F5F5F5;
+          font-weight: 300;
+          margin-left: 5px; }
+          .container header nav ul li a {
+            color: #F5F5F5;
+            text-decoration: none;
+            padding: 5px;
+            transition: 0.3s; }
+            .container header nav ul li a:hover {
+              color: #009DDC; }
+    .container header .mobileNav {
+      display: none;
+      flex: 1;
+      flex-basis: 100%;
+      text-align: center; }
+      @media only screen and (max-width: 800px) {
+        .container header .mobileNav {
+          display: block; } }
+      .container header .mobileNav ul {
+        list-style: none;
+        display: flex; }
+        .container header .mobileNav ul li {
+          flex: 1;
+          display: inline-block;
+          margin: 0 2px;
+          padding: 5px 10px;
+          background-color: #009DDC; }
+          .container header .mobileNav ul li a {
+            text-decoration: none;
+            color: #F5F5F5; }
+    .container header .mobileNavMore {
+      display: none;
+      position: absolute;
+      background-color: #303030;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      text-align: center; }
+      .container header .mobileNavMore ul {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 5px 0; }
+        .container header .mobileNavMore ul li {
+          flex-basis: 50%;
+          text-align: center;
+          padding: 5px 0; }
+          .container header .mobileNavMore ul li a {
+            color: #F5F5F5;
+            text-decoration: none; }
+      .container header .mobileNavMore span {
+        cursor: pointer; }
+  .container .heroPanel {
+    background-color: #8D99AE;
+    color: #F5F5F5;
+    margin: 10px;
+    padding: 25px;
+    margin-bottom: 10px; }
+    .container .heroPanel .heroTitle {
+      font-size: 2.5em;
+      font-weight: 400;
+      margin-bottom: 15px; }
+    .container .heroPanel .heroText {
+      font-weight: 300;
+      color: #F5F5F5;
+      margin-bottom: 25px; }
+      .container .heroPanel .heroText a {
+        color: #F5F5F5; }
+  .container .threePanel {
+    display: flex; }
+    @media only screen and (max-width: 800px) {
+      .container .threePanel {
+        flex-direction: column; } }
+    .container .threePanel div {
+      flex: 1;
+      padding: 25px;
+      margin: 10px;
+      background: #009DDC;
+      color: #F5F5F5; }
+      .container .threePanel div h2 {
+        display: inline-block;
+        background-color: #303030;
+        padding: 5px;
+        margin-bottom: 25px; }
+        .container .threePanel div h2 a {
+          text-decoration: none;
+          color: #F5F5F5; }
+      .container .threePanel div p {
+        font-weight: 400;
+        line-height: 25px;
+        max-width: 200px; }
+  .container .twoPanel {
+    display: flex; }
+    @media only screen and (max-width: 800px) {
+      .container .twoPanel {
+        flex-direction: column; } }
+    .container .twoPanel div {
+      flex: 1;
+      background-color: #C14953;
+      color: #F5F5F5;
+      margin: 10px;
+      padding: 25px; }
+      .container .twoPanel div h2 {
+        display: inline-block;
+        background-color: #303030;
+        padding: 5px;
+        margin-bottom: 25px; }
+        .container .twoPanel div h2 a {
+          text-decoration: none;
+          color: #F5F5F5; }
+      .container .twoPanel div p {
+        font-weight: 300;
+        line-height: 25px;
+        max-width: 300px; }
+  .container footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #303030;
+    color: #F5F5F5;
+    margin: 10px;
+    padding: 25px; }
+    @media only screen and (max-width: 800px) {
+      .container footer {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        text-align: center; } }
+    .container footer .footerSiteMap {
+      flex: 1; }
+      .container footer .footerSiteMap span {
+        display: inline-block;
+        border-bottom: 1px solid #F5F5F5;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        font-weight: 300; }
+      .container footer .footerSiteMap ul {
+        list-style: none; }
+        .container footer .footerSiteMap ul li {
+          font-weight: 300;
+          padding: 5px; }
+          @media only screen and (max-width: 800px) {
+            .container footer .footerSiteMap ul li {
+              display: inline-block; } }
+          .container footer .footerSiteMap ul li a {
+            color: #F5F5F5;
+            text-decoration: none; }
+    .container footer .footerNameSpace {
+      text-align: right; }
+      @media only screen and (max-width: 800px) {
+        .container footer .footerNameSpace {
+          margin-bottom: 25px; } }
+      .container footer .footerNameSpace h1 {
+        margin-bottom: 10px; }
+        .container footer .footerNameSpace h1::before {
+          content: "+ ";
+          color: #009DDC; }
+
+.showCase {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap; }
+  @media only screen and (max-width: 800px) {
+    .showCase {
+      flex-direction: column; } }
+  .showCase .forSalePanel {
+    flex: 1 30%;
+    margin: 10px;
+    background-color: #303030; }
+    @media only screen and (min-width: 800px) and (max-width: 1200px) {
+      .showCase .forSalePanel {
+        flex-basis: 40%; } }
+    @media only screen and (max-width: 800px) {
+      .showCase .forSalePanel {
+        flex-basis: 100%; } }
+    .showCase .forSalePanel .forSalePanelTags {
+      padding: 5px; }
+      .showCase .forSalePanel .forSalePanelTags .pill {
+        display: inline-block;
+        border: 1px solid #F5F5F5;
+        border-radius: 10px;
+        background-color: #F5F5F5;
+        padding: 2px 5px;
+        font-weight: 400; }
+      .showCase .forSalePanel .forSalePanelTags .pillTech {
+        background-color: skyblue;
+        border-color: skyblue; }
+      .showCase .forSalePanel .forSalePanelTags .pillLiving {
+        background-color: lightgreen;
+        border-color: lightgreen; }
+      .showCase .forSalePanel .forSalePanelTags .pillJewlery {
+        background-color: gold;
+        border-color: gold; }
+      .showCase .forSalePanel .forSalePanelTags .pillTransportation {
+        background-color: coral;
+        border-color: coral; }
+      .showCase .forSalePanel .forSalePanelTags .pillCar {
+        background-color: pink;
+        border-color: pink; }
+      .showCase .forSalePanel .forSalePanelTags .pillVG {
+        background-color: darkred;
+        border-color: darkred;
+        color: #F5F5F5; }
+      .showCase .forSalePanel .forSalePanelTags .pillFurniture {
+        background-color: AntiqueWhite;
+        border-color: Antique-White; }
+    .showCase .forSalePanel .forSalePanelImg img {
+      width: 100%;
+      margin-bottom: 5px; }
+    .showCase .forSalePanel .forSalePanelText {
+      color: #F5F5F5;
+      padding: 15px;
+      margin-bottom: 10px; }
+      .showCase .forSalePanel .forSalePanelText h3 {
+        margin-bottom: 15px; }
+      .showCase .forSalePanel .forSalePanelText p {
+        font-weight: 300;
+        line-height: 25px; }
+  .showCase .flexMed {
+    flex-basis: 40%; }
+  .showCase .flexHome {
+    flex-basis: 20%; }
+    @media only screen and (min-width: 800px) and (max-width: 1200px) {
+      .showCase .flexHome {
+        flex-basis: 40%; } }
+
+.sellPanel {
+  background-color: #009DDC;
+  margin: 10px;
+  padding: 25px;
+  display: flex; }
+  @media only screen and (max-width: 800px) {
+    .sellPanel {
+      flex-direction: column; } }
+  @media only screen and (min-width: 800px) and (max-width: 1200px) {
+    .sellPanel {
+      flex-direction: column; } }
+  .sellPanel .sellPanelTips {
+    flex: 1; }
+    @media only screen and (max-width: 800px) {
+      .sellPanel .sellPanelTips {
+        display: none; } }
+    @media only screen and (min-width: 800px) and (max-width: 1200px) {
+      .sellPanel .sellPanelTips {
+        margin-bottom: 25px;
+        max-width: 500px; } }
+    .sellPanel .sellPanelTips h2 {
+      margin-bottom: 25px;
+      font-size: 2em; }
+    .sellPanel .sellPanelTips p {
+      line-height: 30px;
+      font-weight: 300;
+      color: #F5F5F5; }
+  .sellPanel .sellPanelForm {
+    flex: 2;
+    text-align: right;
+    padding-top: 10px; }
+    @media only screen and (min-width: 800px) and (max-width: 1200px) {
+      .sellPanel .sellPanelForm {
+        margin-left: auto;
+        margin-right: auto; } }
+    .sellPanel .sellPanelForm #inpTitle {
+      display: inline-block;
+      width: 500px;
+      height: 30px;
+      padding: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #F5F5F5;
+      background-color: #F5F5F5;
+      color: #303030; }
+      @media only screen and (max-width: 800px) {
+        .sellPanel .sellPanelForm #inpTitle {
+          width: 100%; } }
+    .sellPanel .sellPanelForm #txtBody {
+      display: inline-block;
+      width: 500px;
+      padding: 5px;
+      resize: none;
+      border: 1px solid #F5F5F5;
+      color: #303030;
+      background-color: #F5F5F5;
+      margin-bottom: 15px;
+      font-family: "Roboto", sans-serif; }
+      @media only screen and (max-width: 800px) {
+        .sellPanel .sellPanelForm #txtBody {
+          width: 100%; } }
+    .sellPanel .sellPanelForm #outputImgUrl {
+      display: inline-block;
+      width: 500px;
+      height: 30px;
+      padding: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #F5F5F5;
+      background-color: #F5F5F5;
+      color: #009DDC;
+      text-align: center; }
+      @media only screen and (max-width: 800px) {
+        .sellPanel .sellPanelForm #outputImgUrl {
+          width: 100%; } }
+    .sellPanel .sellPanelForm .formButtons button {
+      display: inline-block;
+      width: 500px;
+      height: 25px;
+      margin-bottom: 5px;
+      border: 1px solid #303030;
+      background-color: #303030;
+      color: #F5F5F5;
+      cursor: pointer;
+      transition: 0.3s; }
+      .sellPanel .sellPanelForm .formButtons button:hover {
+        background-color: #F5F5F5;
+        border-color: #F5F5F5;
+        color: #303030; }
+      @media only screen and (max-width: 800px) {
+        .sellPanel .sellPanelForm .formButtons button {
+          width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
